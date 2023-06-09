@@ -11,6 +11,6 @@ package com.cerditosenfuga.logic;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("¡Cerditos En Fuga!");
+        System.out.println("¡Cerditos En Fuga..!");
     }
 }
