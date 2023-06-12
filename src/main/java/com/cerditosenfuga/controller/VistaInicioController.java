@@ -1,4 +1,7 @@
-// controlador creado por DIEGO BASANTE
+/* 
+controlador creado por DIEGO BASANTE
+
+*/
 package com.cerditosenfuga.controller;
 
 import java.net.URL;
@@ -9,7 +12,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-// LA SIGUIENTE CLASE CREA LA FUNCIONALIDAD DE LA INTERFAZ VistaInicio.fxml
+/*
+LA SIGUIENTE CLASE CREA LA FUNCIONALIDAD DE LA INTERFAZ VistaInicio.fxml
+
+*/
 public class VistaInicioController implements Initializable {
 
     private String Nombre;
@@ -27,20 +33,26 @@ public class VistaInicioController implements Initializable {
     }
 
     @FXML
-    //handleButton1Click crea la funcionalidad del boton play
+    /*handleButton1Click crea la funcionalidad del boton play
+    
+    */
     private void handleButton1Click(ActionEvent event) {
 
     }
 
     @FXML
-    //handleButton2Click crea la funcionalidad del boton Exit 
+    /*handleButton2Click crea la funcionalidad del boton Exit 
+    
+    */
     private void handleButton2Click(ActionEvent event) {
 
         System.exit(0);
     }
 
     @FXML
-    //handleButtonClick sirve para guardar el nombre que ingrese el usuario
+    /*handleButtonClick sirve para guardar el nombre que ingrese el usuario
+    
+    */
     private void handleButtonClick(ActionEvent event) {
 
         Nombre = outputName.getText();
