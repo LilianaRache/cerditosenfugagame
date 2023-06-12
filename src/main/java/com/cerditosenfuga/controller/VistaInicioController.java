@@ -1,5 +1,5 @@
 // controlador creado por DIEGO BASANTE
-package controladores;
+package com.cerditosenfuga.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;

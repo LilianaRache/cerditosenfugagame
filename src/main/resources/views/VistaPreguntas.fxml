@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import com.gluonhq.charm.glisten.control.ProgressBar?>
+<?import com.gluonhq.charm.glisten.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VistaPreguntasController">
+   <children>
+      <Avatar layoutX="50.0" layoutY="60.0" radius="50.0">
+         <image>
+            <Image url="@../imagenes/cerdo_chaqueta.jpeg" />
+         </image>
+      </Avatar>
+      <ProgressBar layoutX="172.0" layoutY="101.0" prefHeight="23.0" prefWidth="200.0" progress="0.0" />
+      <ProgressIndicator layoutX="383.0" layoutY="97.0" progress="0.0" />
+   </children>
+</AnchorPane>

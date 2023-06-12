@@ -1,5 +1,7 @@
+com\cerditosenfuga\controller\VistaPreguntasController.class
+com\cerditosenfuga\models\Utilidades.class
+com\cerditosenfuga\controller\VistaInicioController.class
 com\cerditosenfuga\logic\Main.class
 com\cerditosenfuga\models\Juego.class
 com\cerditosenfuga\models\Reto.class
 com\cerditosenfuga\models\Jugador.class
-com\cerditosenfuga\models\Utilidades.class
