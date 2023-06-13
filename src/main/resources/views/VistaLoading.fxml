@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="408.0" prefWidth="532.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.cerditosenfuga.controller.VistaLoadingController">
+   <children>
+      <ImageView fx:id="gif" fitHeight="408.0" fitWidth="532.0" layoutX="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/gif_loading.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
