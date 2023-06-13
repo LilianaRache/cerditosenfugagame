@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.cerditosenfuga.logic;
 
 import javafx.application.Application;
@@ -21,10 +17,15 @@ public class Main extends Application{
         launch(args);
     }
     
+    /**
+     * 
+     * @param primaryStage
+     * @throws Exception 
+     * Metodo carga vistaInicio
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
-        System.out.println( getClass().getResource("VistaInicio.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("/views/VistaInicio.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/VistaPreguntas.fxml"));
         primaryStage.setTitle("Cerdito En Fuga");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
