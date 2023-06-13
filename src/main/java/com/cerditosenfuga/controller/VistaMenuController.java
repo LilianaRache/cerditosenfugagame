@@ -9,14 +9,14 @@ import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
 /**
- * FXML Controller class
+ * Controlador de la vista menu.
  *
  * @author Jorge Grey
  */
 public class MenuController implements Initializable {
 
     /**
-     * Initializes the controller class.
+     * Inicializamos la clase del controlador.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

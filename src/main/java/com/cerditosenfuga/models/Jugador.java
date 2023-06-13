@@ -5,28 +5,34 @@
 package com.cerditosenfuga.models;
 
 /**
- *
+ * Clase Jugador
  * @author Jorge Grey
  */
 
-// Definimos la clase "Jugador"
+/**
+* Definimos la clase "Jugador"
+*/
+
 public class Jugador {
-    
-    // Creamos loa atributos
+    /**
+    * Creamos loa atributos
+    */
     private String nombre;
     private int vida;
     private int retosAlcanzados;
     
-    // Creamos el constructor
+    /**
+    * Creamos el constructor
+    */
     public Jugador (String jugador, int vida, int retosAlcanzados){
         this.nombre = jugador;
         this.vida = vida;
         this.retosAlcanzados = retosAlcanzados; 
     }
-    
-    // Creamos las funciones para retornar y modificar atributos
-    
-    // Para el atributo "Nombre" 
+    /**
+    * Creamos las funciones para retornar y modificar atributos
+    */
+  
     public String getNombre(){
         return nombre;
     }
@@ -34,7 +40,7 @@ public class Jugador {
         this.nombre = nombre;
     }
     
-    // Para el atributo "Vida"
+   
     public int getVida(){
         return vida;
     }
@@ -42,7 +48,7 @@ public class Jugador {
         this.vida = vida;
     }
     
-    // Para el atributo "Retos Alcanzados"
+   
     public int getRetosAlcanzados(){
         return retosAlcanzados;
     }

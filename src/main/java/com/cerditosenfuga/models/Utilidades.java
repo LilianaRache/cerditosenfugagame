@@ -5,33 +5,39 @@
 package com.cerditosenfuga.models;
 
 /**
- *
- * @author 
+ * Clase Utilidades
+ * @author Jorge Grey
  */
 
-// Definimos la clase "Utilidades"
+
+/**
+ * Definimos la clase "Utilidades"
+ */
 public class Utilidades {
-        
-    // Creamos loa atributos
+    /**
+    * Creamos los atributos
+    */   
+    
     private String cronometro;
 
-    
-    // Creamos el constructor.
+    /**
+    * Creamos el constructor.
+    */
     public Utilidades (String crono){
         this.cronometro = crono;
     }
-    
-    // Creamos las funciones para retornar y modificar atributos.
-     
+    /**
+    * Creamos las funciones para retornar y modificar atributos.
+    */
     public String getCronometro(){
         return cronometro;
     }
     public void setCronometro(String cronometro){
         this.cronometro = cronometro;
     }
-    
-    // Creamos los metodos necesarios.
-    
+    /**
+    * Creamos los metodos necesarios.
+    */
     public void generarCronometro(String cronometro){
         System.out.println("Cronometro generado con exito");
     }
