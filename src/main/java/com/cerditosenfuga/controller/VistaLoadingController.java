@@ -6,17 +6,25 @@ package com.cerditosenfuga.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 /**
- * Controlador de la vista final.
+ * FXML Controller class
  *
- * @author Jorge Grey
+ * @author basan
  */
-public class VistaFinalController implements Initializable {
+public class VistaLoadingController implements Initializable {
+
+    @FXML
+    private AnchorPane anchorpane;
+    @FXML
+    private ImageView gif;
 
     /**
-     * Inicializamos la clase del controlador.
+     * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

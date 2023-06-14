@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Usuario
+ * @author Grupo9
  */
 public class Main extends Application{
 
@@ -25,7 +25,7 @@ public class Main extends Application{
      */
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/views/VistaPreguntas.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/VistaInicio.fxml"));
         primaryStage.setTitle("Cerdito En Fuga");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
