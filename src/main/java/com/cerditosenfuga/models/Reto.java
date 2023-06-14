@@ -6,21 +6,26 @@ package com.cerditosenfuga.models;
 
 import java.util.ArrayList;
 /**
- *
- * @author 
+ * Clase Reto
+ * @author Jorge Grey
  */
 
-// Definimos la clase "Reto"
+/**
+* Definimos la clase "Reto"
+*/
+
 public class Reto {
-    
-    // Creamos los atributos
+    /**
+    * Creamos los atributos
+    */
     private int id;
     private String enfoque;
     private String enunciado;
     private ArrayList<String> respuestas;
     private String correcta;
-    
-    // Creamos el constructor
+    /**
+    * Creamos el constructor
+    */
     public Reto (int id, String enfoque, String enunciado, ArrayList<String> respuestas, String correcta){
         this.id = id;
         this.enfoque = enfoque;
@@ -28,10 +33,9 @@ public class Reto {
         this.respuestas = respuestas;
         this.correcta = correcta;
     }
-    
-    // Creamos las funciones para retornar y modificar atributos
-    
-    // Para el atributo "Id"
+    /**
+    * Creamos las funciones para retornar y modificar atributos
+    */
     public int getId(){
         return id;
     }
@@ -41,7 +45,7 @@ public class Reto {
     }
     
     
-    // Para el atributo "Enfoque"
+
     public String getEnfoque(){
         return enfoque;
     }
@@ -50,7 +54,7 @@ public class Reto {
     }
     
     
-    // Para el atributo "Enunciado"
+
     
     public String getEnunciado(){
         return enunciado;
@@ -60,7 +64,7 @@ public class Reto {
         this.enunciado = enunciado;
     }
     
-    // Para el atributo "Respuestas"
+    
     
     public ArrayList<String> getRespuestas(){
         return respuestas;
@@ -69,7 +73,10 @@ public class Reto {
     public void getRespuestas(ArrayList<String> respuestas) {
         this.respuestas = respuestas;
     }
-    // Para el atributo "Correcta"
+    
+    
+    
+    
     public String getCorrecta(){
         return correcta;
     }
@@ -78,8 +85,9 @@ public class Reto {
         this.correcta = correcta;
     }
     
-    // Creamos las funciones
-    
+    /**
+    * Creamos las funciones de la clase
+    */
     public void validadRespuesta(String respuestaDada, String respuestaCorrecta){
         System.out.println("XXXXXXXXXXXXX");               
     }
