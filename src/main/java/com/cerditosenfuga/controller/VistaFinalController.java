@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package com.cerditosenfuga.logic;
+package com.cerditosenfuga.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
  *
  * @author Jorge Grey
  */
-public class FinalController implements Initializable {
+public class VistaFinalController implements Initializable {
 
     /**
      * Inicializamos la clase del controlador.

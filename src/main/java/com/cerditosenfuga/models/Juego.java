@@ -3,107 +3,107 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.cerditosenfuga.models;
+
 import java.util.ArrayList;
+
 /**
  * Clase Juego (Principal)
+ *
  * @author Jorge Grey
  */
 
-
 /**
-* Definimos la clase "Juego" 
-*/
+ * Definimos la clase "Juego"
+ */
 public class Juego {
-  /**
-  * Creamos los atributos.
-  */
-  private String jugador; // Nombre del jugador
-  private ArrayList<String> retos; // Lista de retos (preguntas)
-  private String enfoqueSeleccionado; // Enfoque seleccionado (Camino elegido por el jugador)
-  /**
-  * Creamos el constructor 
-  */
-  public Juego(String jugador, ArrayList<String> retos, String enfoqueSeleccionado) {
-    this.jugador = jugador;
-    this.retos = retos;
-    this.enfoqueSeleccionado = enfoqueSeleccionado;
-  }
-  /**
-  * Creamos los métodos para acceder y modificar atributos.
-  */
 
+    /**
+     * Creamos los atributos.
+     */
+    private String jugador; // Nombre del jugador
+    private ArrayList<String> retos; // Lista de retos (preguntas)
+    private String enfoqueSeleccionado; // Enfoque seleccionado (Camino elegido por el jugador)
 
-  public String getJugador() {
-    return jugador;
-  }
+    /**
+     * Creamos el constructor
+     */
+    public Juego(String jugador, ArrayList<String> retos, String enfoqueSeleccionado) {
+        this.jugador = jugador;
+        this.retos = retos;
+        this.enfoqueSeleccionado = enfoqueSeleccionado;
+    }
 
-  public void setJugador(String jugador) {
-    this.jugador = jugador;
-  }
-  
+    /**
+     * Creamos los métodos para acceder y modificar atributos.
+     */
 
-  
-  public ArrayList<String> getRetos() {
-    return retos;
-  }
+    public String getJugador() {
+        return jugador;
+    }
 
-  public void setRetos(ArrayList<String> retos) {
-    this.retos = retos;
-  }
+    public void setJugador(String jugador) {
+        this.jugador = jugador;
+    }
 
+    public ArrayList<String> getRetos() {
+        return retos;
+    }
 
-  
-  
-  public String getEnfoqueSeleccionado() {
-    return enfoqueSeleccionado;
-  }
+    public void setRetos(ArrayList<String> retos) {
+        this.retos = retos;
+    }
 
-  public void setEnfoqueSeleccionado(String enfoqueSeleccionado) {
-    this.enfoqueSeleccionado = enfoqueSeleccionado;
-  }
+    public String getEnfoqueSeleccionado() {
+        return enfoqueSeleccionado;
+    }
 
-  /*
-  * Creamos los metodos necesarios
-   */
-  
-  /**
-   * Metodo para iniciar el juego.
-   * @param Nombre del jugador
-   */
-   public void iniciarJuego(String nombre) {
-    // Actualizamos el atributo "jugador" con el parametro ingresaddo.
-    this.jugador = nombre;
+    public void setEnfoqueSeleccionado(String enfoqueSeleccionado) {
+        this.enfoqueSeleccionado = enfoqueSeleccionado;
+    }
 
-    System.out.println("Se ha iniciado el juego y el nombre del jugador es: " + nombre);
+    /**
+     * Creamos los metodos necesarios
+     */
+    /**
+     * Metodo para iniciar el juego.
+     */
+    public void iniciarJuego(String nombre) {
+        // Actualizamos el atributo "jugador" con el parametro ingresaddo.
+        this.jugador = nombre;
 
-  }
+        System.out.println("Se ha iniciado el juego y el nombre del jugador es: " + nombre);
 
-  /**
-   * Método para seleccionar el camino (enfoque) elejido.
-   * @param Enfoque seleccionado
-   */
-  public void seleccionarEnfoque(String enfoque) {
-    // Actualizamos el atributo "enfoque seleccionado" con el parametro ingresado.
-    this.enfoqueSeleccionado = enfoque;
+    }
 
-    System.out.println("Has elegido el siguiente camino: " + enfoque);
+    /**
+     * Método para seleccionar el camino (enfoque) elejido.
+     *
+     */
+    public void seleccionarEnfoque(String enfoque) {
+        // Actualizamos el atributo "enfoque seleccionado" con el parametro ingresado.
+        this.enfoqueSeleccionado = enfoque;
 
-  }
-  /**
-  * Método que selecciona una pregunta o reto segun el caso
-  * @param Lista de retos
-  */
-  public void obtenerReto(ArrayList<String> listaRetos) {
+        System.out.println("Has elegido el siguiente camino: " + enfoque);
 
-    System.out.println("XXXXXXXXXXXXXX");
+    }
 
-  }
-  /**
-  * Método para actualizar la vida del cerdito al perder un reto o reiniciar el juego
-  * @param Cambio ocurrido a la vida
-  */
-  public void actualizarVida(String cambioVida) {
-      System.out.println("XXXXXXXXXXXXXX");
-  }
+    /**
+     * Método que selecciona una pregunta o reto segun el caso
+     *
+     */
+    public void obtenerReto(ArrayList<String> listaRetos) {
+
+        System.out.println("XXXXXXXXXXXXXX");
+
+    }
+
+    /**
+     * Método para actualizar la vida del cerdito al perder un reto o reiniciar
+     * el juego
+     *
+     */
+    public void actualizarVida(String cambioVida) {
+        System.out.println("XXXXXXXXXXXXXX");
+    }
 
 }

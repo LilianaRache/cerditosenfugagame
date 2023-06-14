@@ -2,18 +2,35 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package com.cerditosenfuga.logic;
+package com.cerditosenfuga.controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 /**
  * Controlador de la vista menu.
  *
  * @author Jorge Grey
  */
-public class MenuController implements Initializable {
+public class VistaMenuController implements Initializable {
+
+    @FXML
+    private Button btnPreguntaMatematicas;
+    @FXML
+    private Button btnPreguntaGeografia;
+    @FXML
+    private Button btnAdivinanzas;
 
     /**
      * Inicializamos la clase del controlador.
@@ -21,6 +38,32 @@ public class MenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
+    @FXML
+    private void obtenerPreguntasMatematicas(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/VistaPreguntas.fxml"));
+            Parent root = loader.load();
+            VistaPreguntasController controllerVistaPreguntas = loader.getController();
+            
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            
+            stage.show();
+            Stage myStage = (Stage) this.btnPreguntaMatematicas.getScene().getWindow();
+        } catch (IOException ex) {
+            Logger.getLogger(VistaMenuController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    private void obtenerPreguntasGeografia(ActionEvent event) {
+    }
+
+    @FXML
+    private void obtenerAdivinanzas(ActionEvent event) {
+    }
+
 }
