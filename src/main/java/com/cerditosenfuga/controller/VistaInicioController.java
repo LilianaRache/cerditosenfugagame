@@ -45,6 +45,9 @@ public class VistaInicioController implements Initializable {
      */
     private void handleButton1Click(ActionEvent event) {
         try {
+             Nombre = outputName.getText();
+        System.out.println(Nombre);
+        
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/VistaMenu.fxml"));
             Parent root = loader.load();
             VistaMenuController controllerVistaMenu = loader.getController();

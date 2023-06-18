@@ -20,7 +20,7 @@
                 <Font name="Bauhaus 93" size="16.0" />
             </font>
         </Label>
-        <TextField fx:id="outputName" layoutX="99.0" layoutY="201.0" onAction="#handleButtonClick" prefHeight="28.0" prefWidth="204.0" promptText="aqui  su  nombre">
+        <TextField fx:id="outputName" layoutX="99.0" layoutY="201.0" onAction="#handleButton1Click" prefHeight="28.0" prefWidth="204.0" promptText="aqui  su  nombre">
             <font>
                 <Font name="Bauhaus 93" size="14.0" />
             </font>
