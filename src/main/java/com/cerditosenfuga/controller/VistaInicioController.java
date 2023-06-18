@@ -45,24 +45,18 @@ public class VistaInicioController implements Initializable {
      */
     private void handleButton1Click(ActionEvent event) {
         try {
-             Nombre = outputName.getText();
+            Nombre = outputName.getText();
         System.out.println(Nombre);
         
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/VistaMenu.fxml"));
-            Parent root = loader.load();
-            VistaMenuController controllerVistaMenu = loader.getController();
-
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
+            Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
+            Stage stage = (Stage) btnPlay.getScene().getWindow();
+            Scene scene = new Scene(tercerRoot);
             stage.setScene(scene);
-
-            stage.show();
-            Stage myStage = (Stage) this.btnPlay.getScene().getWindow();
-
-        } catch (IOException ex) {
-            Logger.getLogger(VistaInicioController.class.getName()).log(Level.SEVERE, null, ex);
+            
+                    
+        } catch (Exception e) {
+            e.getStackTrace();
         }
-
     }
 
     @FXML
@@ -80,8 +74,7 @@ public class VistaInicioController implements Initializable {
      */
     private void handleButtonClick(ActionEvent event) {
 
-        Nombre = outputName.getText();
-        System.out.println(Nombre);
+        
     }
 
 }
