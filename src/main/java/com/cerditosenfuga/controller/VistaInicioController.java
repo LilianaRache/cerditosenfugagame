@@ -15,8 +15,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -46,14 +49,23 @@ public class VistaInicioController implements Initializable {
     private void handleButton1Click(ActionEvent event) {
         try {
             Nombre = outputName.getText();
-        System.out.println(Nombre);
-        
-            Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
-            Stage stage = (Stage) btnPlay.getScene().getWindow();
-            Scene scene = new Scene(tercerRoot);
-            stage.setScene(scene);
-            
-                    
+            if (Nombre.isEmpty()) {
+
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("validacion");
+                alert.setHeaderText(null);
+                alert.setContentText("por favor introdusca su nombre");
+                alert.showAndWait();
+
+            } else {
+
+                Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
+                Stage stage = (Stage) btnPlay.getScene().getWindow();
+                Scene scene = new Scene(tercerRoot);
+                stage.setScene(scene);
+
+            }
+
         } catch (Exception e) {
             e.getStackTrace();
         }
@@ -74,7 +86,6 @@ public class VistaInicioController implements Initializable {
      */
     private void handleButtonClick(ActionEvent event) {
 
-        
     }
 
 }

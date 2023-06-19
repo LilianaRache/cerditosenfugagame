@@ -6,6 +6,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -29,6 +31,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/views/VistaLoading.fxml"));
         primaryStage.setTitle("Cerdito En Fuga");
+        Image icono = new Image("/imagens/Icono.jpg");
+        primaryStage.getIcons().add(icono);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
@@ -38,7 +42,7 @@ public class Main extends Application {
          */
         Timeline timeline = new Timeline();
 
-        KeyFrame keyframe = new KeyFrame(Duration.seconds(5), event -> {
+        KeyFrame keyframe = new KeyFrame(Duration.seconds(2.8), event -> {
             try {
                 Parent secondroot = FXMLLoader.load(getClass().getResource("/views/VistaInicio.fxml"));
                 primaryStage.setScene(new Scene(secondroot));
@@ -48,8 +52,9 @@ public class Main extends Application {
             }
 
         });
+        
         timeline.getKeyFrames().add(keyframe);
         timeline.play();
-        
+
     }
 }
