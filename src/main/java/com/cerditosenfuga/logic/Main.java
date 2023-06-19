@@ -52,7 +52,7 @@ public class Main extends Application {
             }
 
         });
-        
+
         timeline.getKeyFrames().add(keyframe);
         timeline.play();
 
