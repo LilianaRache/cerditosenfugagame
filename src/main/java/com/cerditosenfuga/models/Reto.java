@@ -5,90 +5,93 @@
 package com.cerditosenfuga.models;
 
 import java.util.ArrayList;
+
 /**
  * Clase Reto
+ *
  * @author Jorge Grey
  */
 
 /**
-* Definimos la clase "Reto"
-*/
-
+ * Definimos la clase "Reto"
+ */
 public class Reto {
+
     /**
-    * Creamos los atributos
-    */
-    private int id;
+     * Creamos los atributos
+     */
+    private Integer id;
     private String enfoque;
     private String enunciado;
     private ArrayList<String> respuestas;
     private String correcta;
+
     /**
-    * Creamos el constructor
-    */
-    public Reto (int id, String enfoque, String enunciado, ArrayList<String> respuestas, String correcta){
+     * Creamos el constructor
+     */
+    public Reto() {
+    }
+
+    /**
+     * Creamos el constructor con atributos
+     */
+    public Reto(Integer id, String enfoque, String enunciado, ArrayList<String> respuestas, String correcta) {
         this.id = id;
         this.enfoque = enfoque;
         this.enunciado = enunciado;
         this.respuestas = respuestas;
         this.correcta = correcta;
     }
+
     /**
-    * Creamos las funciones para retornar y modificar atributos
-    */
-    public int getId(){
+     * Encapsulamiento de atributos
+     */
+    
+    public Integer getId() {
         return id;
     }
-    
-    public void setId(int id){
+
+    public void setId(Integer id) {
         this.id = id;
     }
-    
-    
-
-    public String getEnfoque(){
+      
+    public String getEnfoque() {
         return enfoque;
     }
-    public void setEnfoque(String enfoque){
+
+    public void setEnfoque(String enfoque) {
         this.enfoque = enfoque;
     }
-    
-    
 
-    
-    public String getEnunciado(){
+    public String getEnunciado() {
         return enunciado;
     }
-    
-    public void setEnunciado(String enunciado){
+
+    public void setEnunciado(String enunciado) {
         this.enunciado = enunciado;
     }
-    
-    
-    
-    public ArrayList<String> getRespuestas(){
+
+    public ArrayList<String> getRespuestas() {
         return respuestas;
     }
     
+    //TODO: verificar esta liena contra la de arriba
     public void getRespuestas(ArrayList<String> respuestas) {
         this.respuestas = respuestas;
     }
-    
-    
-    
-    
-    public String getCorrecta(){
+
+    public String getCorrecta() {
         return correcta;
     }
-    
-    public void setCorrecta(String correcta){
+
+    public void setCorrecta(String correcta) {
         this.correcta = correcta;
     }
     
-    /**
-    * Creamos las funciones de la clase
-    */
-    public void validadRespuesta(String respuestaDada, String respuestaCorrecta){
-        System.out.println("XXXXXXXXXXXXX");               
+    
+     @Override
+    public String toString() {
+        return "Reto{" + "id=" + id + ", enfoque=" + enfoque + ", enunciado=" + enunciado + ", respuestas=" + respuestas + ", correcta=" + correcta + '}';
     }
+   
 }

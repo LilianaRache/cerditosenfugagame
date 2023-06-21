@@ -16,7 +16,12 @@
             <Image url="@../imagens/imagen_fondo_menu_principal.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="131.0" fitWidth="127.0" layoutX="35.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="preguntaMostrar" alignment="CENTER" layoutX="149.0" layoutY="193.0" prefHeight="30.0" prefWidth="375.0" style="-fx-background-color: #f79452;" textFill="#1d0202">
+         <font>
+            <Font name="Bauhaus 93" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="131.0" fitWidth="127.0" layoutX="35.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/cerdo_chaqueta-Icono.png" />
          </image>
@@ -41,28 +46,28 @@
             <Font name="Bauhaus 93" size="16.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="201.0" layoutY="175.0" prefHeight="50.0" prefWidth="292.0" style="-fx-background-color: #e57022;" text="Preguntas de matemáticas" textFill="#1d0202">
+      <Label fx:id="enfoquePreguntas" alignment="CENTER" layoutX="16.0" layoutY="10.0" prefHeight="40.0" prefWidth="321.0" style="-fx-background-color: #e57022;" textFill="#1d0202">
          <font>
             <Font name="Bauhaus 93" size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="406.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="406.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/corazon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="458.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="458.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/corazon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="510.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="510.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/corazon.png" />
          </image>
       </ImageView>
-      <ProgressBar id="imgProgreso" fx:id="barraProgreso" layoutX="180.0" layoutY="107.0" prefHeight="23.0" prefWidth="240.0" progress="0.0" style="-fx-background-radius: 15;" />
-      <Label contentDisplay="CENTER" layoutX="192.0" layoutY="71.0" text="Progreso" textAlignment="CENTER" textFill="#c76b16">
+      <ProgressBar id="imgProgreso" fx:id="barraProgreso" layoutX="180.0" layoutY="118.0" prefHeight="23.0" prefWidth="240.0" progress="0.0" style="-fx-background-radius: 15;" />
+      <Label contentDisplay="CENTER" layoutX="192.0" layoutY="82.0" text="Progreso" textAlignment="CENTER" textFill="#c76b16">
          <font>
             <Font name="Bauhaus 93" size="24.0" />
          </font>
@@ -70,7 +75,7 @@
             <Bloom />
          </effect>
       </Label>
-      <Label fx:id="porcentajeProgreso" layoutX="427.0" layoutY="104.0" prefHeight="30.0" prefWidth="80.0" text="\%" textFill="#ed9614">
+      <Label fx:id="porcentajeProgreso" layoutX="427.0" layoutY="115.0" prefHeight="30.0" prefWidth="80.0" text="\%" textFill="#ed9614">
          <font>
             <Font name="Bauhaus 93" size="18.0" />
          </font>

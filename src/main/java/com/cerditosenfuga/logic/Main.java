@@ -1,5 +1,6 @@
 package com.cerditosenfuga.logic;
 
+import com.cerditosenfuga.models.Juego;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -7,7 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -16,9 +16,10 @@ import javafx.util.Duration;
  * @author Grupo9
  */
 public class Main extends Application {
+    
+    public static Juego juegoMain = new Juego();
 
     public static void main(String[] args) {
-
         launch(args);
     }
 
