@@ -5,8 +5,10 @@
 package com.cerditosenfuga.models;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -39,7 +41,6 @@ public class Juego {
         this.enfoqueSeleccionado = enfoqueSeleccionado;
     }
 
-
     /**
      * Encapsulamiento de atributos
      */
@@ -50,7 +51,7 @@ public class Juego {
     public void setJugador(Jugador jugador) {
         this.jugador = jugador;
     }
-    
+
     public ArrayList<Integer> getRetosResueltos() {
         return retosResueltos;
     }
@@ -93,7 +94,10 @@ public class Juego {
 
         // Se realiza la lectura del archivo según sea el enfoque seleccionado para cargar los retosResueltos y
         // Se mapea cada línea del archivo dentro de un objeto Reto para agregarlo a la lista de retosResueltos
-        try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
+        try {
+            FileInputStream fileInputStream = new FileInputStream(rutaArchivo);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");
+            BufferedReader br = new BufferedReader(inputStreamReader);
             String linea;
             while ((linea = br.readLine()) != null) {
 
@@ -138,23 +142,22 @@ public class Juego {
         return retoGenerado;
 
     }
-    
+
     /**
      * Método que valida si la respuesta es correcta o incorrecta
      *
      */
-    
-     public boolean validadRespuesta(String respuestaDada, Reto reto){
-        
+    public boolean validadRespuesta(String respuestaDada, Reto reto) {
+
         Integer posicionRespuesta = reto.getRespuestas().indexOf(respuestaDada);
-        
+
         if (posicionRespuesta.toString().equals(reto.getCorrecta())) {
             System.out.println("Respuesta Correcta");
             return true;
-        }else{
+        } else {
             System.out.println("Respuesta Incorrecta");
             return false;
-        }              
+        }
     }
 
     /**

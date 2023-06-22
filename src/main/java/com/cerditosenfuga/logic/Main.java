@@ -18,6 +18,7 @@ import javafx.util.Duration;
 public class Main extends Application {
     
     public static Juego juegoMain = new Juego();
+    public static double progreso;
 
     public static void main(String[] args) {
         launch(args);

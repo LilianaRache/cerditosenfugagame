@@ -75,8 +75,7 @@ public class Reto {
         return respuestas;
     }
     
-    //TODO: verificar esta liena contra la de arriba
-    public void getRespuestas(ArrayList<String> respuestas) {
+    public void setRespuestas(ArrayList<String> respuestas) {
         this.respuestas = respuestas;
     }
 
