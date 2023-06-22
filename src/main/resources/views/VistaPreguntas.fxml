@@ -41,7 +41,7 @@
             <Font name="Bauhaus 93" size="16.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="201.0" layoutY="175.0" prefHeight="50.0" prefWidth="292.0" style="-fx-background-color: #e57022;" text="Preguntas de matemáticas" textFill="#1d0202">
+      <Label fx:id="llbPregunta" alignment="CENTER" layoutX="201.0" layoutY="175.0" prefHeight="50.0" prefWidth="292.0" style="-fx-background-color: #e57022;" text="Preguntas de matemáticas" textFill="#1d0202">
          <font>
             <Font name="Bauhaus 93" size="24.0" />
          </font>

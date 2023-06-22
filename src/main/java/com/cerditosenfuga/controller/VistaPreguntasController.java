@@ -34,6 +34,8 @@ public class VistaPreguntasController implements Initializable {
     private Label porcentajeProgreso;
 
     double progreso;
+    @FXML
+    private Label llbPregunta;
 
     /**
      * Initializa la clase controllador vistas Preguntas.

@@ -43,19 +43,14 @@ public class VistaMenuController implements Initializable {
     @FXML
     private void obtenerPreguntasMatematicas(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/VistaPreguntas.fxml"));
-            Parent root = loader.load();
-            VistaPreguntasController controllerVistaPreguntas = loader.getController();
-            
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
+            Parent terceRoot = FXMLLoader.load(getClass().getResource("/views/VistaPreguntas.fxml"));
+            Stage stage = (Stage) btnPreguntaMatematicas.getScene().getWindow();
+            Scene scene = new Scene (terceRoot);
             stage.setScene(scene);
             
-            stage.show();
-            Stage myStage = (Stage) this.btnPreguntaMatematicas.getScene().getWindow();
-        } catch (IOException ex) {
-            Logger.getLogger(VistaMenuController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } catch (IOException e) {
+            e.printStackTrace();
+               }
     }
 
     @FXML
