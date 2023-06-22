@@ -5,7 +5,6 @@
 package com.cerditosenfuga.controller;
 
 import com.cerditosenfuga.logic.Main;
-import com.cerditosenfuga.models.Juego;
 import com.cerditosenfuga.models.Reto;
 import java.io.IOException;
 import java.net.URL;
@@ -31,7 +30,6 @@ import javafx.stage.Stage;
 public class VistaPreguntasController implements Initializable {
 
     Reto reto;
-    int contador = 0;
 
     @FXML
     private Button btnRespuesta1;
@@ -56,9 +54,12 @@ public class VistaPreguntasController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         barraProgreso.setStyle("-fx-accent: #6bf533;");
+        barraProgreso.setProgress(Main.progreso);
+        porcentajeProgreso.setText(Math.round(Main.progreso * 100) + "%");
         String enfoque = Main.juegoMain.getEnfoqueSeleccionado();
         enfoquePreguntas.setText("Preguntas de " + enfoque.substring(0, 1).toUpperCase() + enfoque.substring(1));
         obtenerPreguntaRespuestas(enfoque);
+        System.out.println("Progreso al iniciar ventana: " + barraProgreso.getProgress());
     }
 
     /**
@@ -100,50 +101,39 @@ public class VistaPreguntasController implements Initializable {
                 if (button.getId().equals("btnRespuesta1")) {
                     boolean respuesta = Main.juegoMain.validadRespuesta(button.getText(), reto);
                     alertaRespuesta(respuesta);
-                    contador++;
-                    incrementarProgreso(respuesta);
+                    Main.contador++;
+                    if (respuesta) {
+                        Main.incrementarProgreso();
+                    }
                     recargarEscena();
                 } else if (button.getId().equals("btnRespuesta2")) {
                     boolean respuesta = Main.juegoMain.validadRespuesta(button.getText(), reto);
                     alertaRespuesta(respuesta);
-                    contador++;
-                    incrementarProgreso(respuesta);
+                    Main.contador++;
+                    if (respuesta) {
+                        Main.incrementarProgreso();
+                    }
                     recargarEscena();
                 } else if (button.getId().equals("btnRespuesta3")) {
                     boolean respuesta = Main.juegoMain.validadRespuesta(button.getText(), reto);
                     alertaRespuesta(respuesta);
-                    contador++;
-                    incrementarProgreso(respuesta);
+                    Main.contador++;
+                    if (respuesta) {
+                        Main.incrementarProgreso();
+                    }
                     recargarEscena();
                 } else if (button.getId().equals("btnRespuesta4")) {
                     boolean respuesta = Main.juegoMain.validadRespuesta(button.getText(), reto);
                     alertaRespuesta(respuesta);
-                    contador++;
-                    incrementarProgreso(respuesta);
+                    Main.contador++;
+                    if (respuesta) {
+                        Main.incrementarProgreso();
+                    }
                     recargarEscena();
                 }
-                // incrementarProgreso();
             }
         } catch (Exception e) {
             System.err.println("Ocurrió un error en la seleccion de respuestas: " + e.getMessage());
-        }
-    }
-
-    /**
-     * Metodo para incrementar el progreso
-     */
-    public void incrementarProgreso(boolean respuesta) {
-        try {
-            Main.progreso += 0.1;
-            if (respuesta) {
-                if (Main.progreso >= 1) {
-                    Main.progreso = 1; //ASI SEA MAS PEQUEÑO NO ESTA ENTRANDO
-                }
-                barraProgreso.setProgress(Main.progreso);
-                porcentajeProgreso.setText(Math.round(Main.progreso * 100) + "%");
-            }
-        } catch (Exception e) {
-            System.err.println("Ocurrió un error cuando incrementa el progreso" + e.getMessage());
         }
     }
 
@@ -169,15 +159,31 @@ public class VistaPreguntasController implements Initializable {
     }
 
     public void recargarEscena() throws IOException {
-        if (contador <= 3) {
+        if (Main.contador <= 1) {
             Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaPreguntas.fxml"));
             Stage stage = (Stage) btnRespuesta1.getScene().getWindow();
             Scene scene = new Scene(loader);
             stage.setScene(scene);
         } else {
             //No recarga, debe validar si son correctr las respuestas avanza... si no mostrar la vista del menu
+            if (Main.progreso >= 1) {
+                Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaMenuDosController.fxml"));
+                Stage stage = (Stage) btnRespuesta1.getScene().getWindow();
+                Scene scene = new Scene(loader);
+                stage.setScene(scene);
+               } 
+                //else {
+//                Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaMenuController.fxml"));
+//                Stage stage = (Stage) btnRespuesta1.getScene().getWindow();
+//                Scene scene = new Scene(loader);
+//                stage.setScene(scene);
+//
+//            }
         }
 
     }
+    
+    
+    
 
 }

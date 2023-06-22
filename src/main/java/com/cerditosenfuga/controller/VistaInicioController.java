@@ -5,10 +5,8 @@ controlador creado por DIEGO BASANTE
 package com.cerditosenfuga.controller;
 
 import com.cerditosenfuga.logic.Main;
-import com.cerditosenfuga.models.Juego;
 import com.cerditosenfuga.models.Jugador;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

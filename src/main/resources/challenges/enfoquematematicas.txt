@@ -1,6 +1,6 @@
 1|¿Cuál es el resultado de 2 + 2?|4|3|5|6|0
 2|¿Cuánto es 5 multiplicado por 6?|30|25|36|42|0
-3|¿Cuál es el valor de π (pi) aproximado?|3.14159|3.14|3.141|3.1415|0
+3|¿Cuál es el valor de π (pi) aproximado?|3.1416|3.14|3.141|3.1415|0
 4|¿Cuál es el área de un cuadrado con lado de longitud 8?|64|16|32|48|0
 5|¿Cuál es el resultado de (3 + 4) * 2?|18|10|14|16|2
 6|¿Cuánto es 12 dividido por 3?|2|4|3|6|1
@@ -21,9 +21,9 @@
 21|¿Cuánto es 4 elevado a la potencia de 3?|64|12|16|48|0
 22|¿Cuál es el resultado de 10 - 6 + 2?|10|8|4|6|3
 23|¿Cuánto es la raíz cuadrada de 16?|4|2|8|6|0
-24|¿Cuál es el resultado de 7 * 3 - 5?|26|14|21|16|2
+24|¿Cuál es el resultado de 7 * 3 - 5?|26|14|21|16|3
 25|¿Cuánto es 25 dividido por 5?|5|10|15|20|0
-26|¿Cuál es el resultado de 12 + (8 / 4)?|16|10|18|14|2
+26|¿Cuál es el resultado de 12 + (8 / 4)?|16|10|18|14|3
 27|¿Cuánto es 3/5 como porcentaje?|50%|30%|60%|75%|2
 28|¿Cuál es el resultado de 2 * (4 + 3)?|14|16|18|20|0
 29|¿Cuánto es la raíz cuadrada de 36?|6|4|8|12|0
