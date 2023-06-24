@@ -4,14 +4,19 @@
  */
 package com.cerditosenfuga.models;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Clase Juego (Principal)
  *
  * @author Jorge Grey
  */
-
 /**
  * Definimos la clase "Juego"
  */
@@ -20,37 +25,39 @@ public class Juego {
     /**
      * Creamos los atributos.
      */
-    private String jugador; // Nombre del jugador
-    private ArrayList<String> retos; // Lista de retos (preguntas)
+    private Jugador jugador; // Jugador
+    private ArrayList<Integer> retosResueltos; // Lista de retosResueltos ya jugados(preguntas
     private String enfoqueSeleccionado; // Enfoque seleccionado (Camino elegido por el jugador)
 
     /**
-     * Creamos el constructor
+     * Creamos los constructores
      */
-    public Juego(String jugador, ArrayList<String> retos, String enfoqueSeleccionado) {
+    public Juego() {
+    }
+
+    public Juego(Jugador jugador, ArrayList<Integer> retosResueltos, String enfoqueSeleccionado) {
         this.jugador = jugador;
-        this.retos = retos;
+        this.retosResueltos = retosResueltos;
         this.enfoqueSeleccionado = enfoqueSeleccionado;
     }
 
     /**
-     * Creamos los métodos para acceder y modificar atributos.
+     * Encapsulamiento de atributos
      */
-
-    public String getJugador() {
+    public Jugador getJugador() {
         return jugador;
     }
 
-    public void setJugador(String jugador) {
+    public void setJugador(Jugador jugador) {
         this.jugador = jugador;
     }
 
-    public ArrayList<String> getRetos() {
-        return retos;
+    public ArrayList<Integer> getRetosResueltos() {
+        return retosResueltos;
     }
 
-    public void setRetos(ArrayList<String> retos) {
-        this.retos = retos;
+    public void setRetosResueltos(ArrayList<Integer> retosResueltos) {
+        this.retosResueltos = retosResueltos;
     }
 
     public String getEnfoqueSeleccionado() {
@@ -67,11 +74,10 @@ public class Juego {
     /**
      * Metodo para iniciar el juego.
      */
-    public void iniciarJuego(String nombre) {
+    public void iniciarJuego(Jugador jugador) {
         // Actualizamos el atributo "jugador" con el parametro ingresaddo.
-        this.jugador = nombre;
-
-        System.out.println("Se ha iniciado el juego y el nombre del jugador es: " + nombre);
+        this.jugador = jugador;
+        System.out.println("Se ha iniciado el juego y el nombre del jugador es: " + jugador.getNombre());
 
     }
 
@@ -79,11 +85,38 @@ public class Juego {
      * Método para seleccionar el camino (enfoque) elejido.
      *
      */
-    public void seleccionarEnfoque(String enfoque) {
+    public ArrayList<Reto> seleccionarEnfoque(String enfoque) {
         // Actualizamos el atributo "enfoque seleccionado" con el parametro ingresado.
         this.enfoqueSeleccionado = enfoque;
-
+        ArrayList<Reto> retos = new ArrayList<>();
         System.out.println("Has elegido el siguiente camino: " + enfoque);
+        String rutaArchivo = "src/main/resources/challenges/enfoque" + enfoque.toLowerCase() + ".txt";
+
+        // Se realiza la lectura del archivo según sea el enfoque seleccionado para cargar los retosResueltos y
+        // Se mapea cada línea del archivo dentro de un objeto Reto para agregarlo a la lista de retosResueltos
+        try {
+            FileInputStream fileInputStream = new FileInputStream(rutaArchivo);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");
+            BufferedReader br = new BufferedReader(inputStreamReader);
+            String linea;
+            while ((linea = br.readLine()) != null) {
+
+                String[] registro = linea.split("\\|");
+
+                ArrayList<String> respuestas = new ArrayList();
+                respuestas.add(registro[2]);
+                respuestas.add(registro[3]);
+                respuestas.add(registro[4]);
+                respuestas.add(registro[5]);
+
+                Reto reto = new Reto(Integer.parseInt(registro[0]), enfoque.toLowerCase(), registro[1], respuestas, registro[6]);
+
+                retos.add(reto);
+            }
+        } catch (IOException e) {
+            System.err.println("Ocurrió un error al leer el archivo del enfoque " + enfoque);
+        }
+        return retos;
 
     }
 
@@ -91,10 +124,40 @@ public class Juego {
      * Método que selecciona una pregunta o reto segun el caso
      *
      */
-    public void obtenerReto(ArrayList<String> listaRetos) {
+    public Reto obtenerReto(ArrayList<Reto> listaRetos, ArrayList<Integer> retosAlcanzados) {
 
-        System.out.println("XXXXXXXXXXXXXX");
+        System.out.println("Generando Pregunta Aleatoria");
 
+        Reto retoGenerado = new Reto();
+        Random random = new Random();
+        int indiceAleatorio = random.nextInt(listaRetos.size());
+
+        retoGenerado = listaRetos.get(indiceAleatorio);
+
+        if (retosAlcanzados.contains(retoGenerado.getId())) {
+            System.out.println("Reto Jugado Anteriormente. Reto = " + retoGenerado.toString());
+            retoGenerado = obtenerReto(listaRetos, retosAlcanzados);
+        }
+
+        return retoGenerado;
+
+    }
+
+    /**
+     * Método que valida si la respuesta es correcta o incorrecta
+     *
+     */
+    public boolean validadRespuesta(String respuestaDada, Reto reto) {
+
+        Integer posicionRespuesta = reto.getRespuestas().indexOf(respuestaDada);
+
+        if (posicionRespuesta.toString().equals(reto.getCorrecta())) {
+            System.out.println("Respuesta Correcta");
+            return true;
+        } else {
+            System.out.println("Respuesta Incorrecta");
+            return false;
+        }
     }
 
     /**
@@ -102,8 +165,8 @@ public class Juego {
      * el juego
      *
      */
-    public void actualizarVida(String cambioVida) {
-        System.out.println("XXXXXXXXXXXXXX");
+    public void actualizarVida(int vida) {
+        //TODO:
     }
 
 }

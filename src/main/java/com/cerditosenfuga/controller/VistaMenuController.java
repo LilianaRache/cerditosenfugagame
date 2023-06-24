@@ -4,6 +4,8 @@
  */
 package com.cerditosenfuga.controller;
 
+import com.cerditosenfuga.logic.Main;
+import com.cerditosenfuga.models.Juego;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -25,6 +27,8 @@ import javafx.stage.Stage;
  */
 public class VistaMenuController implements Initializable {
 
+    private Juego juegoEnfoque = new Juego();
+
     @FXML
     private Button btnPreguntaMatematicas;
     @FXML
@@ -43,22 +47,45 @@ public class VistaMenuController implements Initializable {
     @FXML
     private void obtenerPreguntasMatematicas(ActionEvent event) {
         try {
-            Parent terceRoot = FXMLLoader.load(getClass().getResource("/views/VistaPreguntas.fxml"));
+            Main.juegoMain.setEnfoqueSeleccionado("matematicas");
+            System.out.println("Este es el enfoque con el que queda el Juego: " + Main.juegoMain.getEnfoqueSeleccionado());
+            Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaPreguntas.fxml"));
             Stage stage = (Stage) btnPreguntaMatematicas.getScene().getWindow();
-            Scene scene = new Scene (terceRoot);
+            Scene scene = new Scene(loader);
             stage.setScene(scene);
-            
-        } catch (IOException e) {
-            e.printStackTrace();
-               }
+        } catch (IOException ex) {
+            Logger.getLogger(VistaMenuController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
     private void obtenerPreguntasGeografia(ActionEvent event) {
+        try {
+            Main.juegoMain.setEnfoqueSeleccionado("geografia");
+            System.out.println("Este es el enfoque con el que queda el Juego: " + Main.juegoMain.getEnfoqueSeleccionado());
+            Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaPreguntas.fxml"));
+            Stage stage = (Stage) btnPreguntaGeografia.getScene().getWindow();
+            Scene scene = new Scene(loader);
+            stage.setScene(scene);
+
+        } catch (IOException ex) {
+            Logger.getLogger(VistaMenuController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
     private void obtenerAdivinanzas(ActionEvent event) {
+        try {
+            Main.juegoMain.setEnfoqueSeleccionado("adivinanzas");
+            System.out.println("Este es el enfoque con el que queda el Juego: " + Main.juegoMain.getEnfoqueSeleccionado());
+            Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaPreguntas.fxml"));
+            Stage stage = (Stage) btnAdivinanzas.getScene().getWindow();
+            Scene scene = new Scene(loader);
+            stage.setScene(scene);
+
+        } catch (IOException ex) {
+            Logger.getLogger(VistaMenuController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }

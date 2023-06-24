@@ -1,13 +1,14 @@
 package com.cerditosenfuga.logic;
 
+import com.cerditosenfuga.models.Juego;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -16,9 +17,12 @@ import javafx.util.Duration;
  * @author Grupo9
  */
 public class Main extends Application {
+    
+    public static Juego juegoMain = new Juego();
+    public static double progreso;
+    public static int contador = 0;
 
     public static void main(String[] args) {
-
         launch(args);
     }
 
@@ -57,4 +61,20 @@ public class Main extends Application {
         timeline.play();
 
     }
+    
+    
+    /**
+     * Metodo para incrementar el progreso
+     */
+ 
+     public static double incrementarProgreso() {
+        try {
+            progreso += 0.1;
+        } catch (Exception e) {
+            System.err.println("Ocurrió un error cuando incrementa el progreso" + e.getMessage());
+        }
+             return progreso;
+    }
+    
+    
 }
