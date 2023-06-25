@@ -4,9 +4,13 @@
  */
 package com.cerditosenfuga.controller;
 
+import com.cerditosenfuga.logic.Main;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 
 /**
  * Controlador de la vista final.
@@ -14,13 +18,44 @@ import javafx.fxml.Initializable;
  * @author Jorge Grey
  */
 public class VistaFinalController implements Initializable {
-
+    
+    @FXML
+    private Label textoGanarOPerder1;
+    @FXML
+    private Label textoGanarOPerder2;
     /**
      * Inicializamos la clase del controlador.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        mostrarTextoFinal();
     }    
-    
+    @FXML
+    /**
+     * handleButtonSalirClick Crea la funcionalidad del boton Exit
+     */
+    private void handleButtonSalirClick(ActionEvent event) {
+        System.exit(0);
+    }
+     @FXML
+    /**
+     * handleButtonReiniciarClick Crea la funcionalidad del boton "Volver a jugar"
+     */
+    private void handleButtonReiniciarClick(ActionEvent event) {
+        System.exit(0);
+    }
+    /**
+     * Metodo generar el texto a mostrar segun si el jugador gana o pierde.
+     */
+    @FXML
+    private void mostrarTextoFinal() {
+        if(Main.juegoMain.getJugador().getVida() > 0){
+            textoGanarOPerder1.setText("¡FELICIDADES!");
+            textoGanarOPerder2.setText("¡HAS GANADO!");
+        }else{
+            textoGanarOPerder1.setText("LO SIENTO");
+            textoGanarOPerder2.setText("¡HAS PERDIDO!");
+        }
+            
+    }
 }

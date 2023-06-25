@@ -183,12 +183,10 @@ public class VistaPreguntasController implements Initializable {
         contenedorVidas.getChildren().clear();
 
         for (int i = 0; i < Main.juegoMain.getJugador().getVida(); i++) {
-      // Creamos un objeto ImageView con la imagen de un corazón
             ImageView imageView = new ImageView(new Image("imagens/corazon.png"));
             imageView.setFitWidth(50);
             imageView.setFitHeight(50);
 
-      // Añadimos el objeto ImageView al contenedor
             contenedorVidas.getChildren().add(imageView);
         }
     }
