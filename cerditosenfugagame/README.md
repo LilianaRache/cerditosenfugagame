@@ -1,2 +1,0 @@
-# cerditosenfugagame
-proyecto de escritorio
