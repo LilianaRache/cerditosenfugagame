@@ -6,13 +6,19 @@ package com.cerditosenfuga.controller;
 
 import com.cerditosenfuga.logic.Main;
 import com.cerditosenfuga.models.Jugador;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 /**
  * Controlador de la vista final.
@@ -25,6 +31,11 @@ public class VistaFinalController implements Initializable {
     private Label textoGanarOPerder1;
     @FXML
     private Label textoGanarOPerder2;
+    @FXML
+    private Button btnVolverajugar;
+    @FXML
+    private Button btnsalir;
+
     /**
      * Inicializamos la clase del controlador.
      */
@@ -53,6 +64,11 @@ public class VistaFinalController implements Initializable {
         Main.juegoMain.setJugador(VistaInicioController.jugadorActual);
         
         Main.launch();
+        /*Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaInicio.fxml"));
+
+        Stage stage = (Stage) btnVolverajugar.getScene().getWindow();
+        Scene scene = new Scene(tercerRoot);
+        stage.setScene(scene); */
     }
     /**
      * Metodo generar el texto a mostrar segun si el jugador gana o pierde.

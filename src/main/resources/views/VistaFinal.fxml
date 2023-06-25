@@ -19,12 +19,12 @@
                 <Image url="@../imagens/cerdo_chaqueta-sin-fondo.png" />
             </image>
         </ImageView>
-        <Button fx:id="btnPlay" layoutX="112.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButtonReiniciarClick" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #e57022;" text="VOLVER A JUGAR">
+        <Button fx:id="btnVolverajugar" layoutX="112.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButtonReiniciarClick" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #e57022;" text="VOLVER A JUGAR">
             <font>
                 <Font name="Bauhaus 93" size="16.0" />
             </font>
         </Button>
-        <Button fx:id="btnPlay1" layoutX="323.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButtonSalirClick" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #e57022;" text="SALIR">
+        <Button fx:id="btnsalir" layoutX="323.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButtonSalirClick" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #e57022;" text="SALIR">
             <font>
                 <Font name="Bauhaus 93" size="16.0" />
             </font>
