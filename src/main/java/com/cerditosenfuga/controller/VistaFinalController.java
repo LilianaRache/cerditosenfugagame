@@ -5,7 +5,9 @@
 package com.cerditosenfuga.controller;
 
 import com.cerditosenfuga.logic.Main;
+import com.cerditosenfuga.models.Jugador;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,7 +44,15 @@ public class VistaFinalController implements Initializable {
      * handleButtonReiniciarClick Crea la funcionalidad del boton "Volver a jugar"
      */
     private void handleButtonReiniciarClick(ActionEvent event) {
-        System.exit(0);
+        VistaInicioController.jugadorActual.setNombre("");
+        VistaInicioController.jugadorActual.setVida(3);
+        VistaInicioController.jugadorActual.setRetosAlcanzados(0);
+        
+        Main.juegoMain.setEnfoqueSeleccionado("");
+        Main.juegoMain.setRetosResueltos(new ArrayList<Integer>());
+        Main.juegoMain.setJugador(VistaInicioController.jugadorActual);
+        
+        Main.launch();
     }
     /**
      * Metodo generar el texto a mostrar segun si el jugador gana o pierde.

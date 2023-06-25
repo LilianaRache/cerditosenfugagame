@@ -34,6 +34,8 @@ public class VistaInicioController implements Initializable {
     @FXML
     private TextField outputName;
 
+    public static Jugador jugadorActual;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -56,7 +58,7 @@ public class VistaInicioController implements Initializable {
 
             } else {
                 Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
-                Jugador jugadorActual = new Jugador(Nombre, 3, 0);
+                jugadorActual = new Jugador(Nombre, 3, 0);
                 Main.juegoMain.setJugador(jugadorActual);
                 System.out.println("Este es el jugador Actual - Vista Inicio: "+ jugadorActual.getNombre());
                 Stage stage = (Stage) btnPlay.getScene().getWindow();
