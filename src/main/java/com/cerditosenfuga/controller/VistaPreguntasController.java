@@ -74,7 +74,6 @@ public class VistaPreguntasController implements Initializable {
     /**
      * Metodo para retornar pregunta aleatoria
      */
-    @FXML
     private void obtenerPreguntaRespuestas(String enfoque) {
         ArrayList<Reto> retosEnfoque = Main.juegoMain.seleccionarEnfoque(enfoque);
         ArrayList<Integer> retosAlcanzados = new ArrayList<>();
@@ -88,7 +87,6 @@ public class VistaPreguntasController implements Initializable {
     /**
      * Metodo para mostrar las posibles respuestas
      */
-    @FXML
     private void mapearRespuestas(Reto reto) {
         btnRespuesta1.setText(reto.getRespuestas().get(0));
         btnRespuesta2.setText(reto.getRespuestas().get(1));
@@ -157,7 +155,6 @@ public class VistaPreguntasController implements Initializable {
     /**
      * Metodo para crear alerta
      */
-    @FXML
     public void alertaRespuesta(boolean respuesta) {
         if (respuesta) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -177,7 +174,6 @@ public class VistaPreguntasController implements Initializable {
     /**
      * Metodo para mostrar las vidas del jugador
      */
-    @FXML
     private void mostrarVidas() {
         
         contenedorVidas.getChildren().clear();

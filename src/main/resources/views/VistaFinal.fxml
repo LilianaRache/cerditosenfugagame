@@ -19,22 +19,22 @@
                 <Image url="@../imagens/cerdo_chaqueta-sin-fondo.png" />
             </image>
         </ImageView>
-        <Button fx:id="btnPlay" layoutX="112.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButton1Click" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #e57022;" text="VOLVER A JUGAR">
+        <Button fx:id="btnVolverajugar" layoutX="112.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButton2Click" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #e57022;" text="VOLVER A JUGAR">
             <font>
                 <Font name="Bauhaus 93" size="16.0" />
             </font>
         </Button>
-        <Button fx:id="btnPlay1" layoutX="323.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButton1Click" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #e57022;" text="SALIR">
+        <Button fx:id="btnsalir" layoutX="323.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButton1Click" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #e57022;" text="SALIR">
             <font>
                 <Font name="Bauhaus 93" size="16.0" />
             </font>
         </Button>
-        <Label layoutX="178.0" layoutY="56.0" style="-fx-text-fill: #e57022;" text="¡FELICIDADES!" textFill="WHITE">
+        <Label layoutX="180.0" layoutY="84.0" style="-fx-text-fill: #e57022;" text="¡Usted perdio!" textFill="WHITE">
             <font>
                 <Font name="Bauhaus 93" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="197.0" layoutY="115.0" text="HAS GANADO" textFill="WHITE">
+        <Label layoutX="112.0" layoutY="119.0" text="_____________________" textFill="WHITE">
             <font>
                 <Font name="Bauhaus 93" size="36.0" />
             </font>
