@@ -4,17 +4,17 @@ controlador creado por DIEGO BASANTE
  */
 package com.cerditosenfuga.controller;
 
-import java.io.IOException;
+import com.cerditosenfuga.logic.Main;
+import com.cerditosenfuga.models.Jugador;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -45,21 +45,29 @@ public class VistaInicioController implements Initializable {
      */
     private void handleButton1Click(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/VistaMenu.fxml"));
-            Parent root = loader.load();
-            VistaMenuController controllerVistaMenu = loader.getController();
+            Nombre = outputName.getText();
+            if (Nombre.isEmpty()) {
 
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("validacion");
+                alert.setHeaderText(null);
+                alert.setContentText("por favor introdusca su nombre");
+                alert.showAndWait();
 
-            stage.show();
-            Stage myStage = (Stage) this.btnPlay.getScene().getWindow();
+            } else {
+                Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
+                Jugador jugadorActual = new Jugador(Nombre, 3, 0);
+                Main.juegoMain.setJugador(jugadorActual);
+                System.out.println("Este es el jugador Actual - Vista Inicio: "+ jugadorActual.getNombre());
+                Stage stage = (Stage) btnPlay.getScene().getWindow();
+                Scene scene = new Scene(tercerRoot);
+                stage.setScene(scene);
 
-        } catch (IOException ex) {
-            Logger.getLogger(VistaInicioController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        } catch (Exception e) {
+            System.err.println("Ocurrió un error:  " + e.getMessage());
         }
-
     }
 
     @FXML
@@ -67,7 +75,6 @@ public class VistaInicioController implements Initializable {
      * handleButton2Click crea la funcionalidad del boton Exit
      */
     private void handleButton2Click(ActionEvent event) {
-
         System.exit(0);
     }
 
@@ -77,8 +84,6 @@ public class VistaInicioController implements Initializable {
      */
     private void handleButtonClick(ActionEvent event) {
 
-        Nombre = outputName.getText();
-        System.out.println(Nombre);
     }
 
 }
