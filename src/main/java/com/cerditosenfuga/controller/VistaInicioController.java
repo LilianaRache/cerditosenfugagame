@@ -7,6 +7,7 @@ package com.cerditosenfuga.controller;
 import com.cerditosenfuga.logic.Main;
 import com.cerditosenfuga.models.Jugador;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -38,7 +39,8 @@ public class VistaInicioController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ArrayList<String> array = new ArrayList();
+        Main.juegoMain.setEnfoquesYaSeleccionados(array);
     }
 
     @FXML
@@ -60,6 +62,7 @@ public class VistaInicioController implements Initializable {
                 Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
                 jugadorActual = new Jugador(Nombre, 3, 0);
                 Main.juegoMain.setJugador(jugadorActual);
+                Main.progreso = 0;
                 System.out.println("Este es el jugador Actual - Vista Inicio: "+ jugadorActual.getNombre());
                 Stage stage = (Stage) btnPlay.getScene().getWindow();
                 Scene scene = new Scene(tercerRoot);

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="408.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cerditosenfuga.controller.VistaMenuDosController">
+<AnchorPane id="AnchorPane" prefHeight="408.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cerditosenfuga.controller.VistaMenuDosController">
    <children>
       <ImageView disable="true" fitHeight="426.0" fitWidth="538.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>

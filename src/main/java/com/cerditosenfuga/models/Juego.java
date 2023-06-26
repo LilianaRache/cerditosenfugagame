@@ -28,7 +28,8 @@ public class Juego {
     private Jugador jugador; // Jugador
     private ArrayList<Integer> retosResueltos; // Lista de retosResueltos ya jugados(preguntas
     private String enfoqueSeleccionado; // Enfoque seleccionado (Camino elegido por el jugador)
-
+    private ArrayList<String> enfoquesYaSeleccionados; // Lista de enfoques que el jugador ya ha seleccionado
+    
     /**
      * Creamos los constructores
      */
@@ -39,6 +40,7 @@ public class Juego {
         this.jugador = jugador;
         this.retosResueltos = retosResueltos;
         this.enfoqueSeleccionado = enfoqueSeleccionado;
+        this.enfoquesYaSeleccionados = new ArrayList();
     }
 
     /**
@@ -67,7 +69,14 @@ public class Juego {
     public void setEnfoqueSeleccionado(String enfoqueSeleccionado) {
         this.enfoqueSeleccionado = enfoqueSeleccionado;
     }
+    
+    public ArrayList<String> getEnfoquesYaSeleccionados() {
+        return enfoquesYaSeleccionados;
+    }
 
+    public void setEnfoquesYaSeleccionados(ArrayList enfoquesYaUsados) {
+        this.enfoquesYaSeleccionados = enfoquesYaUsados;
+    }
     /**
      * Creamos los metodos necesarios
      */
@@ -86,7 +95,7 @@ public class Juego {
      *
      */
     public ArrayList<Reto> seleccionarEnfoque(String enfoque) {
-        // Actualizamos el atributo "enfoque seleccionado" con el parametro ingresado.
+        // Actualizamos el atributo "enfoque seleccionado" con el parametro ingresado      
         this.enfoqueSeleccionado = enfoque;
         ArrayList<Reto> retos = new ArrayList<>();
         System.out.println("Has elegido el siguiente camino: " + enfoque);
@@ -169,6 +178,15 @@ public class Juego {
     public void actualizarVida(int cambioDeVida) {
         int nuevaVida = jugador.getVida() + (cambioDeVida);
         jugador.setVida(nuevaVida);
+    }
+    
+    /**
+     * Método para agregar un elemento al ArrayList de enfoques ya seleccionados
+     *
+     * @param enfoque
+     */
+    public void agregarEnfoqueYaSeleccionado(String enfoque) {
+        this.enfoquesYaSeleccionados.add(enfoque);
     }
 
 }

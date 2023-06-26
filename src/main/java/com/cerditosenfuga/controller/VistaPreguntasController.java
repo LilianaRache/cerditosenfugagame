@@ -113,6 +113,19 @@ public class VistaPreguntasController implements Initializable {
                         Main.incrementarProgreso();
                     }else{
                         Main.juegoMain.actualizarVida(-1);
+                        if(Main.juegoMain.getJugador().getVida() > 0){
+                            Parent cuartoRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
+                            Stage stage = (Stage) button.getScene().getWindow();
+                            Scene scene = new Scene(cuartoRoot);
+                            stage.setScene(scene);
+                            stage.show();                            
+                        }else{
+                            Parent quintoRoot = FXMLLoader.load(getClass().getResource("/views/VistaFinal.fxml"));
+                            Stage stage = (Stage) button.getScene().getWindow();
+                            Scene scene = new Scene(quintoRoot);
+                            stage.setScene(scene);
+                            stage.show(); 
+                        }
                     }
                     recargarEscena();
                 } else if (button.getId().equals("btnRespuesta2")) {
@@ -123,6 +136,22 @@ public class VistaPreguntasController implements Initializable {
                         Main.incrementarProgreso();
                     }else{
                         Main.juegoMain.actualizarVida(-1);
+                        
+                        if(Main.juegoMain.getJugador().getVida() > 0){
+                            Parent cuartoRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
+                            Stage stage = (Stage) button.getScene().getWindow();
+                            Scene scene = new Scene(cuartoRoot);
+                            stage.setScene(scene);
+                            stage.show();                            
+                        }else{
+                            Parent quintoRoot = FXMLLoader.load(getClass().getResource("/views/VistaFinal.fxml"));
+                            Stage stage = (Stage) button.getScene().getWindow();
+                            Scene scene = new Scene(quintoRoot);
+                            stage.setScene(scene);
+                            stage.show(); 
+                        }
+                        
+                        
                     }
                     recargarEscena();
                 } else if (button.getId().equals("btnRespuesta3")) {
@@ -133,6 +162,20 @@ public class VistaPreguntasController implements Initializable {
                         Main.incrementarProgreso();
                     }else{
                         Main.juegoMain.actualizarVida(-1);
+                        
+                        if(Main.juegoMain.getJugador().getVida() > 0){
+                            Parent cuartoRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
+                            Stage stage = (Stage) button.getScene().getWindow();
+                            Scene scene = new Scene(cuartoRoot);
+                            stage.setScene(scene);
+                            stage.show();                            
+                        }else{
+                            Parent quintoRoot = FXMLLoader.load(getClass().getResource("/views/VistaFinal.fxml"));
+                            Stage stage = (Stage) button.getScene().getWindow();
+                            Scene scene = new Scene(quintoRoot);
+                            stage.setScene(scene);
+                            stage.show(); 
+                        }
                     }
                     recargarEscena();
                 } else if (button.getId().equals("btnRespuesta4")) {
@@ -143,6 +186,20 @@ public class VistaPreguntasController implements Initializable {
                         Main.incrementarProgreso();
                     }else{
                         Main.juegoMain.actualizarVida(-1);
+                        if(Main.juegoMain.getJugador().getVida() > 0){
+                            Parent cuartoRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
+                            Stage stage = (Stage) button.getScene().getWindow();
+                            Scene scene = new Scene(cuartoRoot);
+                            stage.setScene(scene);
+                            stage.show();                            
+                        }else{
+                            Parent quintoRoot = FXMLLoader.load(getClass().getResource("/views/VistaFinal.fxml"));
+                            Stage stage = (Stage) button.getScene().getWindow();
+                            Scene scene = new Scene(quintoRoot);
+                            stage.setScene(scene);
+                            stage.show(); 
+                        }
+
                     }
                     recargarEscena();
                 }
@@ -196,7 +253,7 @@ public class VistaPreguntasController implements Initializable {
         } else {
             //No recarga, debe validar si son correctr las respuestas avanza... si no mostrar la vista del menu
             if (Main.progreso >= 1 && Main.juegoMain.getJugador().getVida() > 0) {
-                Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaMenuDos.fxml"));
+                Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaFinal.fxml"));
                 Stage stage = (Stage) btnRespuesta1.getScene().getWindow();
                 Scene scene = new Scene(loader);
                 stage.setScene(scene);

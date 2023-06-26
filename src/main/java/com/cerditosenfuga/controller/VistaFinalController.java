@@ -54,7 +54,7 @@ public class VistaFinalController implements Initializable {
     /**
      * handleButtonReiniciarClick Crea la funcionalidad del boton "Volver a jugar"
      */
-    private void handleButtonReiniciarClick(ActionEvent event) {
+    private void handleButtonReiniciarClick(ActionEvent event) throws IOException {
         VistaInicioController.jugadorActual.setNombre("");
         VistaInicioController.jugadorActual.setVida(3);
         VistaInicioController.jugadorActual.setRetosAlcanzados(0);
@@ -63,12 +63,12 @@ public class VistaFinalController implements Initializable {
         Main.juegoMain.setRetosResueltos(new ArrayList<Integer>());
         Main.juegoMain.setJugador(VistaInicioController.jugadorActual);
         
-        Main.launch();
-        /*Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaInicio.fxml"));
+        /*Main.launch();*/
+        Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaInicio.fxml"));
 
         Stage stage = (Stage) btnVolverajugar.getScene().getWindow();
         Scene scene = new Scene(tercerRoot);
-        stage.setScene(scene); */
+        stage.setScene(scene); 
     }
     /**
      * Metodo generar el texto a mostrar segun si el jugador gana o pierde.

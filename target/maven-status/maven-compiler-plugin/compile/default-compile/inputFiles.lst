@@ -1,25 +1,11 @@
-<<<<<<< HEAD
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaFinalController.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaLoadingController.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaMenuDosController.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Jugador.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaInicioController.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaMenuController.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaPreguntasController.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Utilidades.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\logic\Main.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Juego.java
-C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Reto.java
-=======
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaLoadingController.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaMenuDosController.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaPreguntasController.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Juego.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaInicioController.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Jugador.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaFinalController.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\logic\Main.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Reto.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Utilidades.java
-C:\Users\Jorge Grey\Desktop\pull try\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaMenuController.java
->>>>>>> devJorgeGrey
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaLoadingController.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaMenuController.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Juego.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Reto.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaPreguntasController.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\logic\Main.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaInicioController.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaFinalController.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Jugador.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\models\Utilidades.java
+C:\Users\Jorge Grey\Desktop\cerditosenfugagame\cerditosenfugagame\src\main\java\com\cerditosenfuga\controller\VistaMenuDosController.java
