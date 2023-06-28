@@ -69,7 +69,7 @@ public class Main extends Application {
  
      public static double incrementarProgreso() {
         try {
-            progreso += 0.1;
+            progreso += 0.34;
         } catch (Exception e) {
             System.err.println("Ocurrió un error cuando incrementa el progreso" + e.getMessage());
         }

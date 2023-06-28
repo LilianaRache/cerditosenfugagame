@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cerditosenfuga.controller.VistaPreguntasController">
@@ -16,7 +17,7 @@
             <Image url="@../imagens/imagen_fondo_menu_principal.png" />
          </image>
       </ImageView>
-      <Label fx:id="preguntaMostrar" alignment="CENTER" layoutX="93.0" layoutY="185.0" prefHeight="30.0" prefWidth="428.0" style="-fx-background-color: #f79452;" textFill="#1d0202">
+      <Label fx:id="preguntaMostrar" alignment="CENTER" layoutX="93.0" layoutY="185.0" prefHeight="30.0" prefWidth="466.0" style="-fx-background-color: #f79452;" textFill="#1d0202">
          <font>
             <Font name="Bauhaus 93" size="14.0" />
          </font>
@@ -53,17 +54,7 @@
       </Label>
       <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="406.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagens/corazon.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="458.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagens/corazon.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="510.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagens/corazon.png" />
+            <Image url="@../imagens/coazon.png" />
          </image>
       </ImageView>
       <ProgressBar id="imgProgreso" fx:id="barraProgreso" layoutX="180.0" layoutY="118.0" prefHeight="23.0" prefWidth="240.0" progress="0.0" style="-fx-background-radius: 15;" />
@@ -83,5 +74,6 @@
             <Bloom />
          </effect>
       </Label>
+      <HBox fx:id="contenedorVidas" layoutX="394.0" layoutY="1.0" prefHeight="48.0" prefWidth="192.0" />
    </children>
 </AnchorPane>

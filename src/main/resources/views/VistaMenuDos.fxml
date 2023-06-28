@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="408.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cerditosenfuga.controller.VistaMenuDosController">
+<AnchorPane id="AnchorPane" prefHeight="408.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cerditosenfuga.controller.VistaMenuDosController">
    <children>
       <ImageView disable="true" fitHeight="426.0" fitWidth="538.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -19,22 +19,22 @@
             <Image url="@../imagens/imagen_fondo_menu_principal.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnpaja" layoutX="85.0" layoutY="292.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="161.0" style="-fx-background-color: #e57022;" text="Casa de paja" textFill="#e1dada">
+      <Button fx:id="btnpaja" layoutX="47.0" layoutY="294.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="210.0" style="-fx-background-color: #e57022;" text="Casa de paja" textFill="#e1dada">
          <font>
-            <Font name="Bauhaus 93" size="28.0" />
+            <Font name="Bauhaus 93" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="339.0" layoutY="93.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="161.0" style="-fx-background-color: #e57022;" text="Casa de ladrillo" textOverrun="CLIP" wrapText="true">
+      <Button layoutX="189.0" layoutY="193.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="210.0" style="-fx-background-color: #e57022;" text="Casa de ladrillo" textOverrun="CLIP" wrapText="true">
          <font>
-            <Font name="Bauhaus 93" size="28.0" />
+            <Font name="Bauhaus 93" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="213.0" layoutY="189.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="161.0" style="-fx-background-color: #e57022;" text="Casa de madera">
+      <Button layoutX="320.0" layoutY="73.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="210.0" style="-fx-background-color: #e57022;" text="Casa de madera">
          <font>
-            <Font name="Bauhaus 93" size="18.0" />
+            <Font name="Bauhaus 93" size="15.0" />
          </font>
       </Button>
-      <Label layoutX="26.0" layoutY="107.0" prefHeight="39.0" prefWidth="313.0" text="Pasa por cada casa" textFill="WHITE">
+      <Label layoutY="107.0" prefHeight="39.0" prefWidth="313.0" text="Pasa por cada casa" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="34.0" />
          </font>
