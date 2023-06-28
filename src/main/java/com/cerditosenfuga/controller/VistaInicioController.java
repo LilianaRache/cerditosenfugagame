@@ -4,11 +4,11 @@ controlador creado por DIEGO BASANTE
  */
 package com.cerditosenfuga.controller;
 
-import java.io.IOException;
+import com.cerditosenfuga.logic.Main;
+import com.cerditosenfuga.models.Jugador;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,8 +18,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -37,9 +35,12 @@ public class VistaInicioController implements Initializable {
     @FXML
     private TextField outputName;
 
+    public static Jugador jugadorActual;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ArrayList<String> array = new ArrayList();
+        Main.juegoMain.setEnfoquesYaSeleccionados(array);
     }
 
     @FXML
@@ -58,8 +59,11 @@ public class VistaInicioController implements Initializable {
                 alert.showAndWait();
 
             } else {
-
                 Parent tercerRoot = FXMLLoader.load(getClass().getResource("/views/VistaMenu.fxml"));
+                jugadorActual = new Jugador(Nombre, 3, 0);
+                Main.juegoMain.setJugador(jugadorActual);
+                Main.progreso = 0;
+                System.out.println("Este es el jugador Actual - Vista Inicio: "+ jugadorActual.getNombre());
                 Stage stage = (Stage) btnPlay.getScene().getWindow();
                 Scene scene = new Scene(tercerRoot);
                 stage.setScene(scene);
@@ -67,7 +71,7 @@ public class VistaInicioController implements Initializable {
             }
 
         } catch (Exception e) {
-            e.getStackTrace();
+            System.err.println("Ocurrió un error:  " + e.getMessage());
         }
     }
 
@@ -76,7 +80,6 @@ public class VistaInicioController implements Initializable {
      * handleButton2Click crea la funcionalidad del boton Exit
      */
     private void handleButton2Click(ActionEvent event) {
-
         System.exit(0);
     }
 
