@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.cerditosenfuga.controller"},{"l":"com.cerditosenfuga.logic"},{"l":"com.cerditosenfuga.models"}];updateSearchResults();

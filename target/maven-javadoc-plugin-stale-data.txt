@@ -1,0 +1,53 @@
+@options
+@packages
+-classpath
+'C:/Users/Ozkar/.m2/repository/org/openjfx/javafx-controls/16/javafx-controls-16.jar;C:/Users/Ozkar/.m2/repository/org/openjfx/javafx-controls/16/javafx-controls-16-win.jar;C:/Users/Ozkar/.m2/repository/org/openjfx/javafx-graphics/16/javafx-graphics-16.jar;C:/Users/Ozkar/.m2/repository/org/openjfx/javafx-graphics/16/javafx-graphics-16-win.jar;C:/Users/Ozkar/.m2/repository/org/openjfx/javafx-fxml/16/javafx-fxml-16.jar;C:/Users/Ozkar/.m2/repository/org/openjfx/javafx-fxml/16/javafx-fxml-16-win.jar;C:/Users/Ozkar/.m2/repository/org/openjfx/javafx-base/16/javafx-base-16.jar;C:/Users/Ozkar/.m2/repository/org/openjfx/javafx-base/16/javafx-base-16-win.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/Ozkar/Documents/cerditosenfugagame/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Ozkar/Documents/cerditosenfugagame/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'cerditosenfuga 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'cerditosenfuga 1.0-SNAPSHOT API'
+com.cerditosenfuga.controller
+com.cerditosenfuga.logic
+com.cerditosenfuga.models
+C:\Users\Ozkar\.m2\repository\org\openjfx\javafx-controls\16\javafx-controls-16.jar = 1686602240034
+C:\Users\Ozkar\.m2\repository\org\openjfx\javafx-controls\16\javafx-controls-16-win.jar = 1686602241917
+C:\Users\Ozkar\.m2\repository\org\openjfx\javafx-graphics\16\javafx-graphics-16.jar = 1686602240057
+C:\Users\Ozkar\.m2\repository\org\openjfx\javafx-graphics\16\javafx-graphics-16-win.jar = 1686602243390
+C:\Users\Ozkar\.m2\repository\org\openjfx\javafx-fxml\16\javafx-fxml-16.jar = 1686602240084
+C:\Users\Ozkar\.m2\repository\org\openjfx\javafx-fxml\16\javafx-fxml-16-win.jar = 1686602240453
+C:\Users\Ozkar\.m2\repository\org\openjfx\javafx-base\16\javafx-base-16.jar = 1686602240364
+C:\Users\Ozkar\.m2\repository\org\openjfx\javafx-base\16\javafx-base-16-win.jar = 1686602241598
+C:\Users\Ozkar\Documents\cerditosenfugagame\src\main\java = 1686712889664
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\allclasses-index.html = 1687918060626
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\allpackages-index.html = 1687918060629
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\element-list = 1687918060412
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\help-doc.html = 1687918060682
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\index-all.html = 1687918060674
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\index.html = 1687918060598
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\jquery-ui.overrides.css = 1687918060834
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\member-search-index.js = 1687918060637
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\module-search-index.js = 1687918060632
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\overview-summary.html = 1687918060677
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\overview-tree.html = 1687918060592
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\package-search-index.js = 1687918060633
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\script.js = 1687918060717
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\search.js = 1687918060720
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\stylesheet.css = 1687918060694
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\tag-search-index.js = 1687918060639
+C:\Users\Ozkar\Documents\cerditosenfugagame\target\site\apidocs\type-search-index.js = 1687918060635
