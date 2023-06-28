@@ -17,7 +17,7 @@
             <Image url="@../imagens/imagen_fondo_menu_principal.png" />
          </image>
       </ImageView>
-      <Label fx:id="preguntaMostrar" alignment="CENTER" layoutX="93.0" layoutY="185.0" prefHeight="30.0" prefWidth="466.0" style="-fx-background-color: #f79452;" textFill="#1d0202">
+      <Label fx:id="preguntaMostrar" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="171.0" prefHeight="58.0" prefWidth="466.0" style="-fx-background-color: #f79452;" textAlignment="CENTER" textFill="#1d0202">
          <font>
             <Font name="Bauhaus 93" size="14.0" />
          </font>
