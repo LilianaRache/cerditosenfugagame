@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cerditosenfuga.controller.VistaPreguntasController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.88" pickOnBounds="true">
+         <image>
+            <Image url="@../imagens/imagen_fondo_menu_principal.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="preguntaMostrar" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="171.0" prefHeight="58.0" prefWidth="466.0" style="-fx-background-color: #f79452;" textAlignment="CENTER" textFill="#1d0202">
+         <font>
+            <Font name="Bauhaus 93" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="100.0" fitWidth="104.0" layoutX="77.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/cerdo_chaqueta-Icono.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnRespuesta1" alignment="CENTER" layoutX="139.0" layoutY="253.0" mnemonicParsing="false" onMouseClicked="#metodoClick" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #e57022;" text="Respuesta 1" textFill="#1d0202">
+         <font>
+            <Font name="Bauhaus 93" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRespuesta2" alignment="CENTER" layoutX="326.0" layoutY="253.0" mnemonicParsing="false" onMouseClicked="#metodoClick" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #e57022;" text="Respuesta 2" textFill="#1d0202">
+         <font>
+            <Font name="Bauhaus 93" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRespuesta3" alignment="CENTER" layoutX="139.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#metodoClick" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #e57022;" text="Respuesta 3" textFill="#1d0202">
+         <font>
+            <Font name="Bauhaus 93" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRespuesta4" alignment="CENTER" layoutX="326.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#metodoClick" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #e57022;" text="Respuesta 4" textFill="#1d0202">
+         <font>
+            <Font name="Bauhaus 93" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="enfoquePreguntas" alignment="CENTER" layoutX="16.0" layoutY="10.0" prefHeight="30.0" prefWidth="321.0" style="-fx-background-color: #e57022;" textFill="#1d0202">
+         <font>
+            <Font name="Bauhaus 93" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="80.0" fitWidth="70.0" layoutX="406.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/coazon.png" />
+         </image>
+      </ImageView>
+      <ProgressBar id="imgProgreso" fx:id="barraProgreso" layoutX="180.0" layoutY="118.0" prefHeight="23.0" prefWidth="240.0" progress="0.0" style="-fx-background-radius: 15;" />
+      <Label contentDisplay="CENTER" layoutX="192.0" layoutY="82.0" text="Progreso" textAlignment="CENTER" textFill="#c76b16">
+         <font>
+            <Font name="Bauhaus 93" size="24.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="porcentajeProgreso" layoutX="427.0" layoutY="115.0" prefHeight="30.0" prefWidth="80.0" text="\%" textFill="#ed9614">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <HBox fx:id="contenedorVidas" layoutX="394.0" layoutY="1.0" prefHeight="48.0" prefWidth="192.0" />
+   </children>
+</AnchorPane>
