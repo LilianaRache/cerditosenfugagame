@@ -5,9 +5,11 @@
 package com.cerditosenfuga.models;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
@@ -29,7 +31,7 @@ public class Juego {
     private ArrayList<Integer> retosResueltos; // Lista de retosResueltos ya jugados(preguntas
     private String enfoqueSeleccionado; // Enfoque seleccionado (Camino elegido por el jugador)
     private ArrayList<String> enfoquesYaSeleccionados; // Lista de enfoques que el jugador ya ha seleccionado
-    
+
     /**
      * Creamos los constructores
      */
@@ -69,7 +71,7 @@ public class Juego {
     public void setEnfoqueSeleccionado(String enfoqueSeleccionado) {
         this.enfoqueSeleccionado = enfoqueSeleccionado;
     }
-    
+
     public ArrayList<String> getEnfoquesYaSeleccionados() {
         return enfoquesYaSeleccionados;
     }
@@ -77,6 +79,7 @@ public class Juego {
     public void setEnfoquesYaSeleccionados(ArrayList enfoquesYaUsados) {
         this.enfoquesYaSeleccionados = enfoquesYaUsados;
     }
+
     /**
      * Creamos los metodos necesarios
      */
@@ -99,14 +102,14 @@ public class Juego {
         this.enfoqueSeleccionado = enfoque;
         ArrayList<Reto> retos = new ArrayList<>();
         System.out.println("Has elegido el siguiente camino: " + enfoque);
-        String rutaArchivo = "src/main/resources/challenges/enfoque" + enfoque.toLowerCase() + ".txt";
+        String rutaArchivo = "challenges/enfoque" + enfoque.toLowerCase() + ".txt";
 
         // Se realiza la lectura del archivo según sea el enfoque seleccionado para cargar los retosResueltos y
         // Se mapea cada línea del archivo dentro de un objeto Reto para agregarlo a la lista de retosResueltos
         try {
-            FileInputStream fileInputStream = new FileInputStream(rutaArchivo);
-            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");
-            BufferedReader br = new BufferedReader(inputStreamReader);
+            ClassLoader classLoader = getClass().getClassLoader();
+            InputStream inputStream = classLoader.getResourceAsStream(rutaArchivo);
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream,  "UTF-8"));
             String linea;
             while ((linea = br.readLine()) != null) {
 
@@ -179,7 +182,7 @@ public class Juego {
         int nuevaVida = jugador.getVida() + (cambioDeVida);
         jugador.setVida(nuevaVida);
     }
-    
+
     /**
      * Método para agregar un elemento al ArrayList de enfoques ya seleccionados
      *
