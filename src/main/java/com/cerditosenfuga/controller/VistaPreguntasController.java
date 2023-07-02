@@ -72,6 +72,7 @@ public class VistaPreguntasController implements Initializable {
 
     /**
      * Metodo para retornar pregunta aleatoria
+     * @param enfoque
      */
     private void obtenerPreguntaRespuestas(String enfoque) {
         ArrayList<Reto> retosEnfoque = Main.juegoMain.seleccionarEnfoque(enfoque);
@@ -230,7 +231,7 @@ public class VistaPreguntasController implements Initializable {
     /**
      * Metodo para mostrar las vidas del jugador
      */
-    private void mostrarVidas() {
+    public void mostrarVidas() {
         
         contenedorVidas.getChildren().clear();
 
@@ -244,15 +245,16 @@ public class VistaPreguntasController implements Initializable {
     }
 
     public void recargarEscena() throws IOException {
-        if (/*Main.contador <= 3*/ Main.progreso < 1 && Main.juegoMain.getJugador().getVida() > 0 ) {
+        if (/*Main.contador <= 3*/ Main.progreso < 0.3 && Main.juegoMain.getJugador().getVida() > 0 ) {
             Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaPreguntas.fxml"));
             Stage stage = (Stage) btnRespuesta1.getScene().getWindow();
             Scene scene = new Scene(loader);
             stage.setScene(scene);
         } else {
             //No recarga, debe validar si son correctr las respuestas avanza... si no mostrar la vista del menu
-            if (Main.progreso >= 1 && Main.juegoMain.getJugador().getVida() > 0) {
-                Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaFinal.fxml"));
+            if (Main.progreso >= 0.3 && Main.juegoMain.getJugador().getVida() > 0) {
+                Main.juegoMain.getJugador().setVida(3);
+                Parent loader = FXMLLoader.load(getClass().getResource("/views/VistaCasaPaja.fxml"));
                 Stage stage = (Stage) btnRespuesta1.getScene().getWindow();
                 Scene scene = new Scene(loader);
                 stage.setScene(scene);

@@ -29,12 +29,12 @@
                 <Font name="Bauhaus 93" size="16.0" />
             </font>
         </Button>
-        <Label fx:id="textoGanarOPerder1" layoutX="178.0" layoutY="56.0" style="-fx-text-fill: #e57022;" text="" textFill="WHITE">
+        <Label fx:id="textoGanarOPerder1" layoutX="223.0" layoutY="56.0" style="-fx-text-fill: #e57022;" text="" textFill="WHITE">
             <font>
                 <Font name="Bauhaus 93" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="textoGanarOPerder2" layoutX="197.0" layoutY="115.0" text="" textFill="WHITE">
+        <Label fx:id="textoGanarOPerder2" layoutX="181.0" layoutY="115.0" text="" textFill="WHITE">
             <font>
                 <Font name="Bauhaus 93" size="36.0" />
             </font>

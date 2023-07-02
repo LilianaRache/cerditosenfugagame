@@ -1,6 +1,7 @@
 package com.cerditosenfuga.logic;
 
 import com.cerditosenfuga.models.Juego;
+import java.util.ArrayList;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -21,6 +22,9 @@ public class Main extends Application {
     public static Juego juegoMain = new Juego();
     public static double progreso;
     public static int contador = 0;
+    public static String enfoqueCasaMadera = "adivinanzas";
+    public static ArrayList<Integer> preguntasConseguidasCasaLadrillo = new ArrayList<Integer>();
+    public static int preguntaCasaLadrillo = 0;
 
     public static void main(String[] args) {
         launch(args);
@@ -69,7 +73,7 @@ public class Main extends Application {
  
      public static double incrementarProgreso() {
         try {
-            progreso += 0.34;
+            progreso += 0.112;
         } catch (Exception e) {
             System.err.println("Ocurrió un error cuando incrementa el progreso" + e.getMessage());
         }
