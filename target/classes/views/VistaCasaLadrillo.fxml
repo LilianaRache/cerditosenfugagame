@@ -47,7 +47,7 @@
             <Font name="Bauhaus 93" size="16.0" />
          </font>
       </Button>
-      <Label fx:id="enfoquePreguntas" alignment="CENTER" layoutX="16.0" layoutY="10.0" prefHeight="30.0" prefWidth="321.0" style="-fx-background-color: #e57022;" textFill="#1d0202">
+      <Label fx:id="tituloCasa" alignment="CENTER" layoutX="16.0" layoutY="10.0" prefHeight="30.0" prefWidth="321.0" style="-fx-background-color: #e57022;" textFill="#1d0202">
          <font>
             <Font name="Bauhaus 93" size="20.0" />
          </font>
